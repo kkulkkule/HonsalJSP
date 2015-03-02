@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - @localhost" uuid="063b515b-06c1-4664-a64f-829965e9f041">
+    <database-info product="MySQL" version="5.6.21-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.33 ( Revision: alexander.soklakov@oracle.com-20140908134200-8ukofe1izi0r2b63 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <schema name="" catalog="ttt"/>
+    <schema name="" catalog="unitedban"/>
+    <schema name="" catalog="zs"/>
+    <table name="polices" schema="" catalog="ttt" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="reporter" sqlType="VARCHAR" precision="22" scale="0" nullable="false" jdbcType="12"/>
+      <column name="reported" sqlType="VARCHAR" precision="22" scale="0" nullable="false" jdbcType="12"/>
+      <column name="reason" sqlType="VARCHAR" precision="256" scale="0" nullable="false" jdbcType="12" def="J05PIFJFQVNPTic="/>
+      <column name="processed" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="reported_at" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <column name="processed_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="warnings" schema="" catalog="ttt" type="TABLE">
+      <column name="sid" sqlType="VARCHAR" precision="22" scale="0" nullable="false" jdbcType="12"/>
+      <column name="nick" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="warns" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="banned" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="bannedTime" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <column name="lastWarnTime" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="bannedTo" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="sid"/>
+    </table>
+    <table name="banlist" schema="" catalog="unitedban" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="nick" sqlType="VARCHAR" precision="32" scale="0" nullable="true" jdbcType="12"/>
+      <column name="serial" sqlType="VARCHAR" precision="22" scale="0" nullable="false" jdbcType="12"/>
+      <column name="reason" sqlType="LONGTEXT" precision="2147483647" scale="0" nullable="true" jdbcType="-1"/>
+      <column name="bannedTo" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzIwMzctMTItMzEgMjM6NTk6NTkn"/>
+      <column name="bannedAt" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="polices" schema="" catalog="zs" type="TABLE">
+      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
+      <column name="reporter" sqlType="VARCHAR" precision="22" scale="0" nullable="false" jdbcType="12"/>
+      <column name="reported" sqlType="VARCHAR" precision="22" scale="0" nullable="false" jdbcType="12"/>
+      <column name="reason" sqlType="VARCHAR" precision="256" scale="0" nullable="false" jdbcType="12" def="J05PIFJFQVNPTic="/>
+      <column name="processed" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="reported_at" sqlType="DATETIME" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA="/>
+      <column name="processed_at" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="id"/>
+    </table>
+    <table name="warnings" schema="" catalog="zs" type="TABLE">
+      <column name="sid" sqlType="VARCHAR" precision="22" scale="0" nullable="false" jdbcType="12"/>
+      <column name="nick" sqlType="TEXT" precision="65535" scale="0" nullable="false" jdbcType="-1"/>
+      <column name="warns" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="banned" sqlType="TINYINT" precision="3" scale="0" nullable="false" jdbcType="-6" def="MA=="/>
+      <column name="bannedTime" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="Q1VSUkVOVF9USU1FU1RBTVA=" version="true"/>
+      <column name="lastWarnTime" sqlType="TIMESTAMP" precision="19" scale="0" nullable="false" jdbcType="93" def="JzAwMDAtMDAtMDAgMDA6MDA6MDAn"/>
+      <column name="bannedTo" sqlType="DATETIME" precision="19" scale="0" nullable="true" jdbcType="93"/>
+      <primary-key name="PRIMARY" columns="sid"/>
+    </table>
+  </data-source>
+</component>

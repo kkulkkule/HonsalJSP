@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="steam-condenser">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../steam-condenser-java/out/artifacts/steam_condenser_jar/steam-condenser.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
